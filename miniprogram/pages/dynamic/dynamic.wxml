@@ -1,0 +1,43 @@
+<view class="dynamic_box">
+  <view class="content">
+  <!-- 使用瀑布流布局 分为左右两块 -->
+    <view class="left">
+      <view wx:for="{{infoList}}" wx:key="index">
+        <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+      </view>
+    </view>
+    <view class="right">
+      <view wx:for="{{infoList}}" wx:key="index">
+        <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+      </view>
+    </view>
+  </view>
+  <!--  下面是一个模块 -->
+  <template name="item">
+    <view class="content_list" bindtap="detailsInfo"  data-id="{{_id}}" bindlongpress="delete_circle" >
+        <!--  image中 mode="widthFix" 属性让图片高自适应 -->
+        <image src="{{images}}" class="list_img" mode="widthFix"></image>
+        <view class="list_inner">
+            <view class="inner_title">{{content}}</view>
+            <view class="comment_box">
+              <view class="comment_like_box" wx:if="{{thumbsnum&&thumbsnum>0}}">
+                <image src="../../images/icon_like.png" class="like_img"></image>
+                <text class="like_num">{{thumbsnum}}</text>
+              </view>
+              <view class="comment_like_box" wx:if="{{remarksnum&&remarksnum>0}}">
+                <image src="../../images/icon_comment.png" class="like_img"></image>
+                <text class="like_num">{{remarksnum}}</text>
+              </view>
+            </view>
+            <view class="user_info">
+              <image src="{{avatar}}" class="user_header_img"></image>
+              <view class="user_info_list">
+                <view class="user_info_name">{{nickname}}</view>
+                <view class="user_info_date">{{create_time}}</view>
+              </view>
+            </view>
+        </view>
+      </view>
+  </template>
+
+</view>

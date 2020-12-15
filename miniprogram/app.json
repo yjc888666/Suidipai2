@@ -1,0 +1,70 @@
+{
+  "pages": [ 
+    "pages/t/t",
+      "pages/login/login",
+      "pages/in/in",
+    "pages/dynamic/dynamic",
+    "pages/distinguish/distinguish",
+    "pages/shibie_animal/shibie_animal",
+     
+  
+    "pages/sweepCode/sweepCode",
+    "pages/shibie/shibie",
+    
+    "pages/shibie_fruit/shibie_fruit",
+    "pages/shibie_money/shibie_money",
+    "pages/shibie_tongyong/shibie_tongyong",
+    "pages/poster/poster",
+  
+    
+    "pages/dynamicDetails/dynamicDetails",
+    "pages/addComment/addComment",
+    "pages/mine/mine",    
+ 
+    "pages/revisePwd/revisePwd",
+    "pages/SocicalCircle/SocicalCircle",
+    "pages/SocicalCircle/SocialCircleDetail/SocialCircleDetail",
+    "pages/SocicalCircle/SocicalCirclePub/SocialCirclePub",
+    "pages/scan-code/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#14b95d",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/sweepCode/sweepCode",
+        "iconPath": "images/nav/discern_off.png",
+        "selectedIconPath": "images/nav/discern_on.png",
+        "text": "扫码"
+      },
+      {
+        "pagePath": "pages/distinguish/distinguish",
+        "iconPath": "images/nav/wiki_off.png",
+        "selectedIconPath": "images/nav/wiki_on.png",
+        "text": "识物"
+      },
+      {
+        "pagePath": "pages/SocicalCircle/SocicalCircle",
+        "iconPath": "images/nav/square_off.png",
+        "selectedIconPath": "images/nav/square_on.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/nav/me_off.png",
+        "selectedIconPath": "images/nav/me_on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

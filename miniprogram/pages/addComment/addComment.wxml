@@ -1,0 +1,6 @@
+<view class="add_box">
+    <view class="add_photo" bindtap="addPhoto" wx:if="{{!isPhoto}}"><text class="Plus">+</text></view>
+    <view class="add_photo" bindtap="addPhoto" wx:else><image src="{{photoUrl}}" class="photo_img"></image></view>
+    <textarea placeholder="发表这一刻的的想法吧～" class="add_textarea" placeholder-style="color:#a9a9a9;font-size:32rpx;" bindinput="valueChange"></textarea>
+    <button class="btn" bindtap="uploadImg">发表</button>
+</view>

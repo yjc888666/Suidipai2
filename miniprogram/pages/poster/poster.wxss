@@ -1,0 +1,16 @@
+page{background: #f6f6f6}
+.page-view{width:300px; height:500px; margin: 20rpx auto 0 auto}
+
+.preview button:nth-child(1){
+    background: #8be1ec;
+    height:70rpx;
+    line-height:70rpx;
+  }
+  .preview button:nth-child(2){
+    background: #31c0da;
+    height:70rpx;
+    line-height:70rpx;
+  }
+  .preview{padding-top:60rpx;}
+  .preview{display: flex; justify-content: space-between;}
+  .posifl{position: fixed; bottom: 0; left: 0; right: 0;top: 0;background: white;}

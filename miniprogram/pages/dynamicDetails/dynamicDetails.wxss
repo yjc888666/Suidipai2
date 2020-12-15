@@ -1,0 +1,131 @@
+.content{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+/* 头部信息开始 */
+.header_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_img{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.user_info{
+  color: #1a1b3c;
+  font-size: 28rpx;
+}
+.user_time{
+  color: #7a7979;
+  font-size: 23rpx;
+}
+/* 动态title内容部分开始 */
+.conten_title{
+  font-size: 34rpx;
+  color: #1a1b3c;
+  padding-top: 20rpx;
+}
+.conten_img{
+  width: 100%;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.conten_img image{
+  width: 100%;
+}
+/* 动态点赞和评论部分开始 */
+.comment_info{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0 20rpx;
+}
+.comment_like_box{
+  display: flex;
+  align-items: center;
+}
+.comment_like_box:last-child{
+  padding-left: 20rpx;
+}
+.comment_like_box:last-child .like_img{
+  width: 30rpx;
+  height: 31rpx;
+}
+.like_img{
+  width: 30rpx;
+  height: 25rpx;
+}
+.like_num{
+  color: #929292;
+  font-size: 22rpx;
+  padding-left: 8rpx;
+}
+/* 评论显示区域开始 */
+.comment_box{
+  padding-top: 10rpx;
+  border-top: 1px solid #f3f7fa;
+}
+.comment_user_info{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.comment_user_img{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.comment_user_name{
+  font-size: 24rpx;
+  color: #666464;
+}
+.comment_user_title{
+  font-size: 26rpx;
+  color: #1a1b3c;
+}
+/* 用户发表评论区 */
+.say_box{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 10rpx 40rpx 10rpx 20rpx;
+}
+.say_input{
+  width: 70%;
+}
+.say_input_placeholder{
+  color: #929292;
+  font-size: 28rpx;
+}
+.say_btn{
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #3ad881;
+  color: #fff;
+  font-size: 24rpx;
+  border: none;
+}
+.say_btn::after{
+  border: none;
+}
+.zan_box{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon_like_img{
+  width: 45rpx;
+  height: 40rpx;
+}

@@ -1,0 +1,12 @@
+<!-- 创建画布 -->
+<view class='page-view'>
+  <canvas style='width:300px; height:500px;' canvas-id='shareImg'></canvas>
+  <!-- 分享按钮 -->
+  <view class='preview'>
+    <button type='primary' size='mini' data-name="shareBtn" open-type="share">分享给好友</button>
+    <button type='primary' size='mini' bindtap='saveImg'>分享到朋友圈</button>
+  </view> 
+</view>
+
+<cover-view class="posifl" hidden='{{showing}}'></cover-view>
+<!-- 注意微信更新过之后，不允许在用hidden隐藏canvas，可以使用如上cover-view 做一个全屏覆盖，带绘制成功再隐藏 -->

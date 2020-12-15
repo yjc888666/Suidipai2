@@ -1,0 +1,39 @@
+<view class="view-root">
+    <view class="header">
+        <image src="../../images/Background_img.jpg" class="header_bj"></image>
+        <view class="info">
+            <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '../../images/icon_head_portrait.png'}}" alt=""></image>
+            <view class="info_name"><text>{{userInfo.nickName ? userInfo.nickName : '匿名用户'}}</text><text class="info_name_title"></text></view>
+         
+            <view class="info_inner">
+                <view class="info_inner_list" bindtap="toDetail">
+                    <view class="info_inner_list_num">{{publish}}</view>
+                    <view class="info_inner_list_title">发表</view>
+                </view>
+                <view class="info_inner_list">
+                    <view class="info_inner_list_num">{{like}}</view>
+                    <view class="info_inner_list_title">喜欢</view>
+                </view>
+                <view class="info_inner_list">
+                    <view class="info_inner_list_num">{{news}}</view>
+                    <view class="info_inner_list_title">消息</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+       <view class="list_content" bindtap="revisePwd">
+        <view>修改密码</view>
+        <image src="../../images/icon_my_arrow.png" class="icon_arrow"></image>
+       </view>
+       <button class="list_content"  open-type="contact" session-from="weapp">
+        <view>联系我们</view>
+        <image src="../../images/icon_my_arrow.png" class="icon_arrow"></image>
+       </button>
+       <view class="list_content" bindtap="signOut">
+        <view>退出登录</view>
+        <image src="../../images/icon_my_arrow.png" class="icon_arrow"></image>
+       </view>
+    </view>
+    <view class="bottom"></view>
+</view>

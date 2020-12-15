@@ -1,0 +1,24 @@
+<view class="mainbody">
+    <view class="middle {{middleFlip ? 'middle-flip' : ''}}">
+        <form class="form-box front">
+            <view class="form-title">Change Password</view>
+            <view>
+                <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 1 ? 'focus' : ''}}">Username</view>
+                  <input type="text" name="username" data-index="1" bindfocus="inputFucus" value="{{username}}"></input>
+                </view>
+                <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 2 ? 'focus' : ''}}">New Password</view>
+                  <input type="password" name="password" data-index="2" bindinput="update_pass"></input>
+                </view>
+                 <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 3 ? 'focus' : ''}}">Confirm new password</view>
+                  <input type="password" name="password" data-index="3" ></input>
+                </view>
+                <button class="btn-submit" type="submit" bindtap="setUp">
+                    Set up
+                </button>
+            </view>
+        </form>
+    </view>
+</view>

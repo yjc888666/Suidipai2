@@ -1,0 +1,41 @@
+<view class="distinguish_box">
+  <view class="content">
+    <view class="conten_box" bindtap="discern" data-index="1">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_dongwu.png" style="width:190rpx;height:122rpx;"></image>
+      </view>
+      <view class="content_title">识别动物</view>
+    </view>
+    <view class="conten_box" bindtap="discern" data-index="2">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_zhiwu.png" style="width:166rpx;height:104rpx;"></image>
+      </view>
+      <view class="content_title">识别植物</view>
+    </view>
+    <view class="conten_box" bindtap="discern" data-index="3">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_shuiguo.png" style="width:130rpx;height:148rpx;"></image>
+      </view>
+      <view class="content_title">识别果蔬</view>
+    </view>
+    <view class="conten_box" bindtap="discern" data-index="4">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_money.png" style="width:130rpx;height:152rpx;"></image>
+      </view>
+      <view class="content_title">识别货币</view>
+    </view>
+    <view class="conten_box" bindtap="discern" data-index="5">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_tongyong.png" style="width:149rpx;height:120rpx;"></image>
+      </view>
+      <view class="content_title">通用识别</view>
+    </view>
+     <view class="conten_box" bindtap="discern" data-index="6">
+      <view class="img_warp">
+        <image src="../../images/icon/icon_tongyong.png" style="width:149rpx;height:120rpx;"></image>
+      </view>
+      <view class="content_title">通用识别</view>
+    </view>
+  </view>
+  <view class="bottom"></view>
+</view>

@@ -1,0 +1,106 @@
+/*主要是规定中间表单尺寸，调整到自己觉得好看就行了*/
+.mainbody{
+  height: 100vh;
+  width: 100vw;
+  background-color: darkslategrey;
+  display: flex;    /* flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+/*居中效果*/
+.middle {
+  position: relative;
+  height: 850rpx;
+  width: 80%;
+}
+.form-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 80rpx;
+  box-sizing: border-box;
+  background: darkcyan;
+  /* 我觉得这个圆角大小刚刚好 */
+  border-radius: 20rpx;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* 这个属性可以让div成为快元素分行显示 */
+}
+.form-box .form-title{
+  font-size: 42rpx;
+  color: #ccc;
+  text-align: center;
+  font-weight: bold;
+}
+.input_normal {
+  width: 400rpx;
+  position: relative;
+  margin: 90rpx auto 0;
+  text-align: center;
+  transition: .4s;
+  background-color:darkcyan;
+}
+.input_normal input {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1rpx solid #c8c8c8;
+  background-color: transparent;
+  color: #ccc;
+  font-size: 32rpx;
+  z-index: 99999;
+  text-align: left;
+  transition: all ease .3s;
+}
+.input_normal_placeholder{
+  position: absolute;
+  text-align: left;
+  color: #ccc;
+  font-size: 26rpx;
+  left: 0;
+  top: -60%;
+}
+.input_normal .focus{
+  top: -90%;
+  font-size: 32rpx;
+  transition: .3rem;
+}
+.btn-submit {
+  width: 300rpx;
+  height: 85rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35rpx auto 0;
+  font-size: 34rpx;
+  text-align: center;
+  color: white;
+  border-radius: 60rpx;
+  background: darkslategrey;
+  transition: 0.3s;
+}
+.front {
+  transform: rotateY(0deg);
+}
+.front .btn-submit{
+  margin-top: 120rpx;
+}
+/* 将back旋转180度，背面朝向用户，我这边选y轴的 */
+.back {
+  transform: rotateY(-180deg);
+}
+.front, .back {
+  /* 然后设置为背面朝向用户时不可见 */
+  backface-visibility: hidden;
+  /* 我觉得用linear顺滑一点 */
+  transition: 0.3s linear;
+}
+/* 将front旋转180度 */
+.middle-flip .front {
+  transform: rotateY(180deg);
+}
+/* 将back旋转180度 */
+.middle-flip .back {
+  transform: rotateY(0deg) ;
+}

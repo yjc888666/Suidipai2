@@ -1,0 +1,50 @@
+<view class="mainbody">
+    <view class="middle {{middleFlip ? 'middle-flip' : ''}}">
+        <form class="form-box front">
+            <view class="form-title">Login</view>
+            <view>
+                <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 1 ? 'focus' : ''}}">Username</view>
+                  <input type="text" name="lusername" data-index="1" bindfocus="inputFucus" bindinput="inputName"></input>
+                </view>
+                <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 2 ? 'focus' : ''}}">Password</view>
+                  <input type="password" name="lpassword" data-index="2" bindfocus="inputFucus" bindinput="inputPassword"></input>
+                </view>
+                <view class="forget" bindtap="forgetPwd">forget password ?</view>
+                <view class="btn-submit" bindtap="login">
+                    LOGIN
+                </view>
+            </view>
+            <view class="last">
+                <!-- <p style="margin-top: 40px">If you don't have account.Please</p>-->
+                <view>Click here to <text id="signin" bindtap="signin">Sign Up</text></view>
+            </view>
+        </form>
+        <!-- 对的你没看错，上下两个表单基本上没区别，一个front，一个back -->
+        <form class="form-box back">
+            <view class="form-title">Register</view>
+            <view>
+                <view class="input_normal">
+                  <view class="input_normal_placeholder {{iFucusNum == 3 ? 'focus' : ''}}">Username</view>
+                  <input type="text" name="username" data-index="3" bindfocus="inputFucus" bindinput="regName"></input>
+                </view>
+                <view class="input_normal">
+                <view class="input_normal_placeholder {{iFucusNum == 4 ? 'focus' : ''}}">Password</view>
+                  <input type="password" name="password" data-index="4" bindfocus="inputFucus" bindinput="regPassword"></input>
+                </view>
+                <view class="input_normal">
+                <view class="input_normal_placeholder {{iFucusNum == 5 ? 'focus' : ''}}">Repeat</view>
+                  <input type="password" data-index="5" bindfocus="inputFucus" bindinput="inputRepeat" ></input>
+                </view>
+                <button class="btn-submit" bindtap="register">
+                    Register
+                </button>
+            </view>
+            <view class="last">
+                <view>Have a account ? You can</view>
+                <view style="margin-top: 0.05rem;">Click here to <text id="login" bindtap="signin">Log in</text></view>
+            </view>
+        </form>
+    </view>
+</view>

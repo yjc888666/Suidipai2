@@ -1,0 +1,63 @@
+page{
+  background-color: #f3f7fa;
+}
+.sweepCode_box{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  padding: 50rpx 40rpx 0;
+}
+.banner_box{
+  width: 100%;
+  min-height: 600rpx;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10rpx;
+}
+.banner_img{
+  width: 100%;
+}
+.banner_title{
+  padding: 50rpx 30rpx;
+  color: #1a1b39;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.btn{
+  background-color: #03c15f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35rpx;
+  margin-top: 50rpx;
+}
+.btn_choose{
+  margin-top: 10rpx;
+  background-color: #f3f7fa;
+  border: none;
+  color: #03c15f;
+  font-size: 35rpx;
+}
+.btn_choose::after{
+  border: none;
+}
+.icon_arrow{
+  width: 15rpx;
+  height: 25rpx;
+}
+.icon_img{
+  width: 63rpx;
+  height: 63rpx;
+  margin-right: 7rpx;
+}
+.bottom{
+  width: 100%;
+  height: 10rpx;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}

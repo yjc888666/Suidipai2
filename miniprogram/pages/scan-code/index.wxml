@@ -1,0 +1,23 @@
+
+
+<view class="container">
+  <view class="page-body">
+
+    <view class="weui-cells__title">扫码结果</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view id="copy_value" class="weui-cell__bd">{{result}}</view>
+        <button bindtap='copy' data-text="{{result}}">复制</button>
+      </view>
+    </view>
+<!--https://github.com/yingye/weapp-qrcode-->
+    <view class="weui-cell_input">
+      <input class="weui-input" bindinput="bindKeyInput" placeholder="    输入文本信息" />
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap='getcode' data-code='{{inputValue}}'>生成二维码</button>
+    </view>
+    <canvas style="margin-left:160rpx;width: 400rpx; height: 400rpx;" canvas-id="myQrcode" bindtap="previewImage"></canvas>
+    <!-- <template is="foot" /> -->
+  </view>
+</view>

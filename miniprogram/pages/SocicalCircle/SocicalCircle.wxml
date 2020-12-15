@@ -1,0 +1,80 @@
+<scroll-view class="box" scroll-y="true" style="height:100%" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading" scroll-top="{{scrolltop}}">
+  <!--背景小图标-->
+
+  <view class="bg">
+    <image class="baseimg" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1579008743&di=7c268255e024cca447c4d35be28dfbf1&src=http://pic1.win4000.com/wallpaper/8/59b38f7e912cd.jpg" mode="aspectFill"></image>
+  </view>
+  <!--背景图底部大头像-->
+  <view class="headimg">
+    <open-data type="userAvatarUrl" class="baseimg"></open-data>
+  </view>
+  <!--背景图底部昵称-->
+  <view class="nickname">
+    <open-data type="userNickName"></open-data>
+  </view>
+  <!--占位行-->
+  <view class="lie"></view>
+
+  <!--循环展示-->
+  <!--内容循环展示-->
+  <view class="padding " style="margin-top:-200rpx;">
+    <view class="item" wx:for="{{lists}}" bindtap="detail" wx:for-item="v" wx:key="its" data-id="{{index}}" data-title="{{v.title}}">
+     
+     <view class="c-head"> 
+     <view class="c-bottom">
+          <view class="user">
+            <image class="u-img" src="{{v.avatar}}"></image>
+            <view class="u-box">
+              <text class="u-name">{{v.nickname}}</text>
+              <!--<text class="u-time">{{v.time}}</text>-->
+            </view>
+          </view>
+          
+        </view>
+        <view class="c-top">
+          <!--text class="title">{{v.title}}</text-->
+          <text class="info ellipsis-3">{{v.content}}</text>
+        </view>
+        </view>
+      
+      <!--图片展示区域-->
+      <view class="cu-form-group">
+        <view class="grid col-3 grid-square flex-sub" style='margin-top:20rpx;'>
+          <view class="bg-img" wx:for="{{v.images}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{v.images[index]}}" data-imglist="{{v.images}}">
+            <image src="{{v.images[index]}}" mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+     
+
+<!-- --------------------- -->
+<view class="content" bindtap="todetail" data-id="{{index}}">
+
+     <view class="c-bottom">
+        
+          <view class="user">
+            <image class="u-img" src=""></image>
+            <view class="u-box">
+              <text class="u-name"></text>
+              <!--<text class="u-time">{{v.time}}</text>-->
+            </view>
+          </view>
+       
+          <view class="right">
+            <view class="text-gray text">
+              <text class="cuIcon-appreciatefill margin-lr"></text>{{v.thumbsnum}}
+              <text class="cuIcon-messagefill margin-lr-xs"></text> {{v.remarksnum}}
+            </view>
+          </view>
+        </view>
+        </view>
+    </view>
+  </view>
+</scroll-view>
+ <button
+  open-type="getUserInfo"
+  bindgetuserinfo="topub">
+    <!-- <image class="add_icon" src="../../images/add.png"></image> -->
+    <view class="add" >+</view>
+</button>
+

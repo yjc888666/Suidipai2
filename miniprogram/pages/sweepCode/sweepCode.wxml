@@ -1,0 +1,9 @@
+<view class="sweepCode_box">
+  <view class="banner_box">
+    <image class="banner_img" src="../../images/sys_bj.jpg"></image>
+    <view class="banner_title">点击「扫描二维码」,将镜头焦点对准二维码或者条形码，自动扫描</view>
+  </view>
+  <button class="btn" bindtap="getScan"><image class="icon_img" src="../../images/icon_sys.png"></image> 扫描二维码</button>
+  <button class="btn_choose" bindtap="choosePohot">来自相册 <image class="icon_arrow" src="../../images/icon_arrow_green.png"></image> </button>
+  <view class="bottom"></view>
+</view>

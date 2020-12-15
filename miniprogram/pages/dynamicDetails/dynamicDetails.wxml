@@ -1,0 +1,44 @@
+<view class="content">
+  <!-- 头部发表动态用户信息 -->
+  <view class="header_box">
+    <image src="{{dynamicData.userInfo.url ? dynamicData.userInfo.url : '../../images/icon_head_portrait.png'}}" class="header_img"></image>
+    <view class="user_info">
+      <view class="user_name">{{dynamicData.userInfo.name ? dynamicData.userInfo.name : '匿名用户'}}</view>
+      <view class="user_time" wx:if="dynamicData.userInfo.date">{{dynamicData.userInfo.date}}</view>
+    </view>
+  </view>
+  <!-- 动态内容/图片部分 -->
+  <view class="conten_title">{{dynamicData.title}}</view>
+  <view class="conten_img" wx:if="{{dynamicData.image}}">
+    <image src="{{dynamicData.image}}" mode="widthFix"></image>
+  </view>
+  <!-- 点赞/评论显示块 -->
+  <view class="comment_info">
+    <view class="comment_like_box">
+      <image src="../../images/icon_like.png" class="like_img" wx:if="{{!isLike}}"></image>
+      <image src="../../images/icon_like_choose.png" class="like_img" wx:else></image>
+      <text class="like_num">{{dynamicData.likes&&dynamicData.likes>0 ? dynamicData.likes : 0}}</text>
+    </view>
+    <view class="comment_like_box" wx:if="{{dynamicData.comment&&dynamicData.comment.length>0}}">
+      <image src="../../images/icon_comment.png" class="like_img"></image>
+      <text class="like_num">{{dynamicData.comment.length}}</text>
+    </view>
+  </view>
+  <!-- 评论内容信息 -->
+  <view class="comment_box" wx:if="{{dynamicData.comment&&dynamicData.comment.length>0}}">
+    <view class="comment_user_info" wx:for="{{dynamicData.comment}}" wx:key='index'>
+        <image src="{{item.userImg ? item.userImg : '../../images/icon_head_portrait.png'}}" class="comment_user_img"></image>
+        <view class="comment_user_name">{{item.userName ? item.userName : '匿名用户'}}：</view>
+        <view class="comment_user_title">{{item.userTitle}}</view>
+    </view>
+  </view>
+  <!-- 用户发布评论区 -->
+  <view class="say_box">
+    <input placeholder="我来说两句～" placeholder-class="say_input_placeholder" class="say_input"></input>
+    <button class="say_btn">发表</button>
+    <view class="zan_box" bindtap="dianZan"> 
+      <image src="../../images/icon_like.png" class="icon_like_img" wx:if="{{!isLike}}"></image>
+      <image src="../../images/icon_like_choose.png" class="icon_like_img" wx:else></image>
+    </view>
+  </view>
+</view>

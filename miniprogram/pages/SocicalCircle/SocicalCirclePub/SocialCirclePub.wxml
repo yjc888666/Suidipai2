@@ -1,0 +1,26 @@
+<view class="cu-form-group margin-top">
+  <textarea maxlength="-1" bindinput="textareaAInput" placeholder="写下你此刻的想法吧..."></textarea>
+</view>
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    图片上传
+  </view>
+  <view class="action">
+    {{images.length}}/6
+  </view>
+</view>
+<view class="cu-form-group">
+  <view class="grid col-3 grid-square flex-sub">
+    <view class="bg-img" wx:for="{{images}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{images[index]}}">
+      <image src="{{images[index]}}" mode="aspectFill"></image>
+      <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+    <view class="solids" bindtap="ChooseImage" wx:if="{{images.length<6}}">
+      <text class="cuIcon-cameraadd"></text>
+    </view>
+  </view>
+</view>
+<button class="cu-btn block bg-black margin-tb-sm lg" style="width:650rpx;margin-left:50rpx;margin-top;"  bindtap="upimages">上传</button>
+

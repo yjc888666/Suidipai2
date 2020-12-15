@@ -1,0 +1,45 @@
+<!-- 动画 -->
+<view class='animation' wx:if="{{animation}}">
+  <view class='animation-list'></view>
+</view>
+
+<!-- 图片展示区域 -->
+<view class='pages'>
+  <view class='face'>
+    <image src='{{botany}}' mode='widthFix'></image>
+  </view>
+</view>
+
+<!-- 识别结果展示 -->
+<view wx:if="{{aibotany}}">
+  <view class='result'>
+      <text class='result-text'>识别结果</text>
+      <text class='result-text friends' bindtap='shAre'>分享给好友</text>
+  </view>
+
+  <!-- 属性展示 -->
+    <view class='botany-view'>
+      <view class='botany'>
+        <view>货币类型</view>
+        <view>面值</view>
+        <view>年份</view>
+      </view>  
+
+   
+        <view class='botany botany-attr'>
+        <view>{{name1}}</view>
+        <view>{{value1}}</view>
+        <view>{{year1}}</view>
+       </view>
+      
+       </view> 
+</view>
+ <!-- 非货币展示 -->
+ <view class='nobotany' wx:if="{{nohave}}">
+  {{noflower}}
+ </view>
+
+<!--选择图片 -->
+<view class='btn' wx:if="{{aibtn}}">
+  <button type='primary' bindtap='faceImage'>选择图片</button>
+</view>

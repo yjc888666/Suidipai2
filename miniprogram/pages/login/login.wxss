@@ -1,0 +1,141 @@
+/*主要是规定中间表单尺寸，调整到自己觉得好看就行了*/
+.mainbody{
+  height: 100vh;
+  width: 100vw;
+  background-color: darkslategrey;
+  display: flex;    /* flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+/*居中效果*/
+.middle {
+  position: relative;
+  height: 850rpx;
+  width: 80%;
+  /*使左上角对应到父元素的中心*/
+  /* position: absolute; */
+  /* 使用定位的时候一定要遵循父是相定位position: relative;，
+  子是绝对定位,定位有局限性，元素会脱离文档流不受控制，
+  一般用flex布局，但是pc端有兼容问题*/
+  /*向左向上偏移50%*/
+  /* transform: translate(-50%, -50%); */
+  perspective: 880rpx;
+}
+.form-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 80rpx;
+  box-sizing: border-box;
+  background: darkcyan;
+  /* 我觉得这个圆角大小刚刚好 */
+  border-radius: 20rpx;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* 这个属性可以让div成为快元素分行显示 */
+}
+.form-box .form-title{
+  font-size: 42rpx;
+  color: #ccc;
+  text-align: center;
+  font-weight: bold;
+}
+.input_normal {
+  width: 400rpx;
+  position: relative;
+  margin: 90rpx auto 0;
+  text-align: center;
+  transition: .4s;
+  background-color:darkcyan;
+}
+.input_normal input {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1rpx solid #c8c8c8;
+  background-color: transparent;
+  color: #ccc;
+  font-size: 32rpx;
+  z-index: 99999;
+  text-align: left;
+  transition: all ease .3s;
+}
+.forget{
+  padding-top: 40rpx;
+  text-align: right;
+  color: #ccc;
+  font-size: 23rpx;
+}
+.input_normal_placeholder{
+  position: absolute;
+  text-align: left;
+  color: #ccc;
+  font-size: 26rpx;
+  left: 0;
+  top: -60%;
+}
+
+.input_normal .focus{
+  top: -90%;
+  font-size: 32rpx;
+  transition: .3rem;
+}
+.btn-submit {
+  width: 300rpx;
+  height: 85rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35rpx auto 0;
+  font-size: 34rpx;
+  text-align: center;
+  color: white;
+  border-radius: 60rpx;
+  background: darkslategrey;
+  transition: 0.3s;
+}
+
+.front {
+  transform: rotateY(0deg);
+
+}
+.front .btn-submit{
+  margin-top: 120rpx;
+}
+
+/* 将back旋转180度，背面朝向用户，我这边选y轴的 */
+.back {
+  transform: rotateY(-180deg);
+}
+
+.front, .back {
+  /* 然后设置为背面朝向用户时不可见 */
+  backface-visibility: hidden;
+  /* 我觉得用linear顺滑一点 */
+  transition: 0.3s linear;
+}
+
+/* 将front旋转180度 */
+.middle-flip .front {
+  transform: rotateY(180deg);
+}
+/* 将back旋转180度 */
+.middle-flip .back {
+  transform: rotateY(0deg) ;
+}
+.last{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 55rpx;
+  left: 0;
+  color: #fff;
+  font-size: 24rpx;
+}
+/* 我调整了一下，感觉还不错的样式，你可以改成其他的好看点的 */
+#login,#signin{
+  color: #00ffff;
+  cursor: pointer;
+}
